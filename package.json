@@ -1,5 +1,5 @@
 {
-  "name": "graphql-crunch",
+  "name": "@dessly/graphql-crunch",
   "version": "2.1.4",
   "description": "Normalizes GraphQL responses by reducing duplication, resulting in smaller payloads and faster JSON parsing.",
   "main": "dist/src/index.js",
