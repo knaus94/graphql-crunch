@@ -44,13 +44,13 @@ const encoders = {
     decode: (data: string) => tReader.read(data),
   },
 
-  "Crunch 1.0": {
-    encode: (data: JSON) => JSON.stringify(crunch(data)),
-    decode: (data: string) => uncrunch(JSON.parse(data)),
-  },
+  //   "Crunch 1.0": {
+  //     encode: (data: JSON) => JSON.stringify(crunch(data)),
+  //     decode: (data: string) => uncrunch(JSON.parse(data)),
+  //   },
 
   "Crunch 2.0": {
-    encode: (data: JSON) => JSON.stringify(crunch(data, 2)),
+    encode: (data: JSON) => JSON.stringify(crunch(data)),
     decode: (data: string) => uncrunch(JSON.parse(data)),
   },
 };

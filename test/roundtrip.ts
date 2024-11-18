@@ -9,18 +9,18 @@ const blobs: { [key: string]: string } = {
   Businesses: join(__dirname, "../../test/json/businesses.json"),
 };
 
-Object.keys(blobs).forEach((blobName) =>
-  test(`GraphQL 1.0 - Round-tripping ${blobName} blob.`, () => {
-    const blobPath = blobs[blobName]!;
-    const content = JSON.parse(readFileSync(blobPath).toString());
-    expect(uncrunch(crunch(content))).toEqual(content);
-  })
-);
+// Object.keys(blobs).forEach((blobName) =>
+//   test(`GraphQL 1.0 - Round-tripping ${blobName} blob.`, () => {
+//     const blobPath = blobs[blobName]!;
+//     const content = JSON.parse(readFileSync(blobPath).toString());
+//     expect(uncrunch(crunch(content))).toEqual(content);
+//   })
+// );
 
 Object.keys(blobs).forEach((blobName) =>
   test(`GraphQL 2.0 - Round-tripping ${blobName} blob.`, () => {
     const blobPath = blobs[blobName]!;
     const content = JSON.parse(readFileSync(blobPath).toString());
-    expect(uncrunch(crunch(content, 2))).toEqual(content);
+    expect(uncrunch(crunch(content))).toEqual(content);
   })
 );
